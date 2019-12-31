@@ -9,11 +9,11 @@ const geoCode = (address, callback) => {
   request({ url: URL, json: true }, (error, response) => {
     if (error) {
       return callback({
-        error: "Something went wrong while fetching your location."
+        error: "در زمان دریافت اطلاعات هواشناسی یه چیزی اشتباس"
       });
     } else if (response.body.features.length === 0) {
       return callback({
-        error: "Could not find the location. Try another search."
+        error: "ناتوان در شناسایی موقعیت. مجددا جستجو کنید."
       });
     } else {
       return callback(undefined, {
