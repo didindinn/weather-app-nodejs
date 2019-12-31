@@ -14,10 +14,10 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       return callback(
         undefined,
-        `${data.daily.data[0].summary} دمای کنونی هوا ${data.currently.temperature} درجه سانتی گراد میباشد.\n
+        "${data.daily.data[0].summary} دمای کنونی هوا ${data.currently.temperature} درجه سانتی گراد میباشد.\n
           بیشترین دما: ${data.daily.data[0].temperatureHigh}درجه سانتی گراد میباشد.\n
           کمترین دما: ${data.daily.data[0].temperatureLow}درجه سانتی گراد میباشد.\n
-          شانس بارندگی امروز شما ${data.currently.precipProbability}% می باشد.`
+          شانس بارندگی امروز شما ${data.currently.precipProbability}% می باشد."
       );
     }
   });
