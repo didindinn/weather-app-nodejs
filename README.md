@@ -1,6 +1,6 @@
 # Weather APP - Node
 
-This is a weather app built on Node Js.
+This is weather app built on Node Js.
 
 ## Getting Started
 
