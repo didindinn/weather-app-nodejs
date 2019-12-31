@@ -30,9 +30,9 @@ app.use(express.static(publicDirectoryPath));
 // Routes
 app.get("/", (req, res) => {
   res.render("index", {
-    title: "Weather App",
+    title: "به اَپلیکیشن آب و هوا خوش آمدید",
     name: "Arpit Malik",
-    message: "Enter the location to find the weather."
+    message: "مثال : shiraz, fars, iran"
   });
 });
 
