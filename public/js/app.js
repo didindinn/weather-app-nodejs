@@ -20,7 +20,7 @@ const searchLocation = event => {
       }
 
       loader.style.display = "none";
-      messageOne.textContent = data.location;
+      messageOne.textContent = ;
       messageTwo.textContent = data.forecast;
     });
   });
