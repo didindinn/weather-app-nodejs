@@ -1,3 +1,6 @@
+div{
+  white-space: pre-wrap;
+}
 body {
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
