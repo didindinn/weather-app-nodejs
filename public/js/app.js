@@ -1,4 +1,3 @@
-const messageOne = document.getElementById("message-1");
 const messageTwo = document.getElementById("message-2");
 const loader = document.getElementById("loaderWrapper");
 
@@ -9,7 +8,6 @@ const searchLocation = event => {
 
   loader.style.display = "flex";
   messageTwo.textContent = "";
-  messageOne.textContent = "";
 
   fetch(`/weather?location=${address}`).then(response => {
     response.json().then(data => {
@@ -20,7 +18,6 @@ const searchLocation = event => {
       }
 
       loader.style.display = "none";
-      messageOne.textContent = ;
       messageTwo.textContent = data.forecast;
     });
   });
