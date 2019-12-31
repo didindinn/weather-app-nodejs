@@ -61,7 +61,7 @@ app.get("/help", (req, res) => {
 
 app.get("/weather", (req, res) => {
   if (!req.query.location) {
-    return res.send({ error: "You must provide an address." });
+    return res.send({ error: "شما بایستی مطابق مثال آدرسی وارد کنید" });
   }
 
   geoCode(
