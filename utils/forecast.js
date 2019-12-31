@@ -14,9 +14,9 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       return callback(
         undefined,
-        `${data.daily.data[0].summary} It is currently ${data.currently.temperature}°C.
-          Highest Temperature: ${data.daily.data[0].temperatureHigh}°C.
-          Lowest Temperature: ${data.daily.data[0].temperatureLow}°C.
+        `${data.daily.data[0].summary} It is currently ${data.currently.temperature}°C.\
+          Highest Temperature: ${data.daily.data[0].temperatureHigh}°C.\
+          Lowest Temperature: ${data.daily.data[0].temperatureLow}°C.\
           There is a ${data.currently.precipProbability}% chance of rain.`
       );
     }
