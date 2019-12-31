@@ -7,17 +7,17 @@ const forecast = (latitude, longitude, callback) => {
     const data = response.body;
     if (error) {
       return callback({
-        error: "Something went wrong while fetching weather."
+        error: "در زمان دریافت اطلاعات هواشناسی یه چیزی اشتباس"
       });
     } else if (data.error) {
-      return callback({ error: "Unable to find location" });
+      return callback({ error: "ناتوان در شناسایی موقعیت" });
     } else {
       return callback(
         undefined,
-        `${data.daily.data[0].summary} It is currently ${data.currently.temperature}°C.
-          Highest Temperature: ${data.daily.data[0].temperatureHigh}°C.
-          Lowest Temperature: ${data.daily.data[0].temperatureLow}°C.
-          There is a ${data.currently.precipProbability}% chance of rain.`
+        `${data.daily.data[0].summary} دمای کنونی هوا ${data.currently.temperature}°C.
+          بیشترین دما: ${data.daily.data[0].temperatureHigh}°C.
+          کمترین دما: ${data.daily.data[0].temperatureLow}°C.
+          شانس بارندگی امروز شما ${data.currently.precipProbability}% می باشد.`
       );
     }
   });
