@@ -28,10 +28,12 @@ npm install
 ```
 
 To run the project on local server, run:
+For development purpose:
 ```
-nodemon src/app.js -e js,hbs
+npm run dev
 ```
 OR
+For production:
 ```
 npm start
 ```
