@@ -7,11 +7,13 @@ const forecast = require("../utils/forecast");
 // Initialise App
 const app = express();
 
+const PORT = process.env.PORT || 8080;
+
 // Specify directory paths for express config.
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
-const READMEpath = path.join(__filename,"../../README.md");
+const READMEpath = path.join(__filename, "../../README.md");
 
 // Setup handlebars engine and views location.
 app.set("view engine", "hbs");
@@ -102,6 +104,6 @@ app.get("*", (req, res) => {
 });
 
 // Create Server.
-app.listen(8080, () => {
-  console.log("Server is up on port 8080.");
+app.listen(PORT, () => {
+  console.log("Server is up on port - " + PORT + ".");
 });
