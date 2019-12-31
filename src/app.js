@@ -64,11 +64,11 @@ app.get("/weather", (req, res) => {
     return res.send({ error: "شما بایستی مطابق مثال آدرسی وارد کنید" });
   }
 
-//   geoCode(
-//     req.query.location,
-//     (error, { latitude, longitude, location } = {}) => {
-//       if (error) return res.send(error);
-// 
+   geoCode(
+     req.query.location,
+     (error, { latitude, longitude, location } = {}) => {
+       if (error) return res.send(error);
+ 
       forecast(latitude, longitude, (error, forecastData) => {
         if (error) return res.send({ error });
 
@@ -76,7 +76,7 @@ app.get("/weather", (req, res) => {
           forecast: forecastData,
           location,
           address: req.query.location
-//         });
+         });
       });
     }
   );
@@ -98,7 +98,7 @@ app.get("/weather", (req, res) => {
 app.get("*", (req, res) => {
   res.render("404error", {
     title: "Error 404",
-    name: "Arpit Malik",
+    name: "",
     errorMessage: "Page not found."
   });
 });
